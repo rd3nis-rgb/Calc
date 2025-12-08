@@ -1,0 +1,84 @@
+
+/* Base styles */
+body { font-family: Arial, sans-serif; background:#f5f7fa; margin:20px; }
+.card { background:white; padding:16px; border-radius:12px; max-width:900px; margin:auto;
+        box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+table { width:100%; border-collapse:collapse; margin-top:18px; }
+th, td { border:1px solid #888; padding:8px; text-align:center; }
+th { background:#e4e9f2; font-weight:bold; }
+.hidden { display:none; }
+.temp-input { padding:8px; border:2px solid #007bff; border-radius:6px; width:150px; font-size:16px; }
+h2 { margin-top:30px; }
+
+/* Buttons */
+.modern-btn, button {
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: 0.2s;
+}
+.modern-btn:hover, button:hover {
+  transform: translateY(-2px);
+  background:#43A047;
+}
+
+.button-row { margin:20px 0; display:flex; gap:12px; }
+
+/* MOBILE IMPROVEMENTS */
+@media (max-width: 700px){
+
+  body {
+    margin: 10px;
+    font-size: 17px;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align:center;
+  }
+
+  /* Buttons become full width */
+  button, .modern-btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    justify-content:center;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Tables scroll horizontally for mobile */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .temp-input {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+  }
+}
